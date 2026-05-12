@@ -1,0 +1,28 @@
+{
+  "_comment": "SmartQMS Tenant Configuration Template. Copy this to tenant.config.json and fill in all values. This file is NEVER committed to git — add it to .gitignore.",
+
+  "tenant": {
+    "name":        "Your Company Name",
+    "logoUrl":     "https://drive.google.com/uc?id=YOUR_LOGO_FILE_ID",
+    "adminEmail":  "qms-admin@yourcompany.com",
+    "locale":      "en"
+  },
+
+  "gcp": {
+    "projectId":    "your-gcp-project-id",
+    "region":       "me-west1",
+    "instanceName": "smartqms-db-prod",
+    "dbName":       "smartqms"
+  },
+
+  "appsScript": {
+    "scriptId":     "YOUR_APPS_SCRIPT_SCRIPT_ID",
+    "driveRootFolderId": "YOUR_GOOGLE_DRIVE_FOLDER_ID"
+  },
+
+  "qms": {
+    "passingScore":       80,
+    "riskAlertThreshold": 3,
+    "applicableStandards": ["ISO 13485", "ISO 14971"]
+  }
+}

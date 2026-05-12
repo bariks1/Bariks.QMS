@@ -1,0 +1,24 @@
+{
+  "name": "smartqms",
+  "version": "1.0.0",
+  "description": "SmartQMS – Generic QMS for Google Workspace",
+  "scripts": {
+    "test":        "jest --runInBand",
+    "test:watch":  "jest --watch --runInBand",
+    "test:cover":  "jest --coverage --runInBand",
+    "syntax":      "node tests/syntax/check-all.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"],
+    "setupFilesAfterFramework": [],
+    "setupFiles": ["./tests/setup/gas-globals.js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "apps-script/**/*.js"
+    ]
+  }
+}
