@@ -1,21 +1,43 @@
 # SmartQMS – .gitignore
 
-# ─────────────────────────────────────────────────────────────────────────────
-# SECURITY: NEVER commit these files
-# ─────────────────────────────────────────────────────────────────────────────
+# ── Security: NEVER commit these files ────────────────────────────────────────
 tenant.config.json
 tenant.credentials.json
 *.credentials.json
-.clasp.json          # Contains scriptId — per-tenant, not shared
+.clasp.json       # Contains scriptId — per-tenant, not shared
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Node / npm
-# ─────────────────────────────────────────────────────────────────────────────
+# ── Build outputs ─────────────────────────────────────────────────────────────
+build/
+dist/
+out/
+.cache/
+
+# ── Node / npm ────────────────────────────────────────────────────────────────
 node_modules/
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
 
-# ─────────────────────────────────────────────────────────────────────────────
-# OS
-# ─────────────────────────────────────────────────────────────────────────────
+# ── Test / Coverage ───────────────────────────────────────────────────────────
+.nyc_output/
+coverage/
+
+# ── IDE and editor files ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.swp
+*.swo
+
+# ── OS files ─────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# ── Editor scratch ────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+*.log
+*~
